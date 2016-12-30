@@ -14,36 +14,21 @@ public class XPresenterImpl implements XPresenter {
 
     public XPresenterImpl(XView view) {
         this.view = view;
-        this.model = new XModel(this);
+        this.model = new XModel();
     }
 
     @Override
     public void requestAction1() {
-        model.requestAction1();
-    }
-
-    @Override
-    public void postResult1(String result) {
-        view.postResult1(result);
+        view.postResult1(model.requestAction1());
     }
 
     @Override
     public void requestAction2() {
-        model.requestAction2();
-    }
-
-    @Override
-    public void postResult2(String result) {
-        view.postResult2(result);
+        view.postResult2(model.requestAction2());
     }
 
     @Override
     public void requestAction3() {
-        model.requestAction3();
-    }
-
-    @Override
-    public void postResult3(String result) {
-        view.postResult3(result);
+        view.postResult3(model.requestAction3());
     }
 }

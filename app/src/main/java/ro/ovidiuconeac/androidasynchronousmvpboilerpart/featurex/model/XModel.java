@@ -1,31 +1,23 @@
 package ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.model;
 
-import ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.presenter.XPresenter;
-
 /**
  * Created by ovidiu on 12/29/16.
  */
 
 public class XModel {
 
-    private XPresenter presenter;
-
-    public XModel(XPresenter presenter) {
-        this.presenter = presenter;
+    public String requestAction1() {
+        // Compute some data here
+        return "Response 1";
     }
 
-    public void requestAction1() {
+    public String requestAction2() {
         // Compute some data here
-        presenter.postResult1("Response 1");
+        return "Response 2";
     }
 
-    public void requestAction2() {
+    public String requestAction3() {
         // Compute some data here
-        presenter.postResult2("Response 2");
-    }
-
-    public void requestAction3() {
-        // Compute some data here
-        presenter.postResult2("Response 3");
+        return "Response 3";
     }
 }
