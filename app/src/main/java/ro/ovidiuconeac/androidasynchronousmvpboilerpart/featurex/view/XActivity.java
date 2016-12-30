@@ -1,4 +1,4 @@
-package ro.ovidiuconeac.androidasynchronouscallbackmvpboilerpart.featurex.view;
+package ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.view;
 
 import android.os.Bundle;
 import android.os.Process;
@@ -8,8 +8,8 @@ import android.util.Log;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import ro.ovidiuconeac.androidasynchronouscallbackmvpboilerpart.featurex.presenter.XPresenter;
-import ro.ovidiuconeac.androidasynchronouscallbackmvpboilerpart.featurex.presenter.XPresenterImpl;
+import ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.presenter.XPresenter;
+import ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.presenter.XPresenterImpl;
 
 /**
  * Created by ovidiu on 12/29/16.

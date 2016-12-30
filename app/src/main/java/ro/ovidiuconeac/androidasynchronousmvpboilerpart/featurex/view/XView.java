@@ -1,4 +1,4 @@
-package ro.ovidiuconeac.androidasynchronouscallbackmvpboilerpart.featurex.view;
+package ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.view;
 
 /**
  * Created by ovidiu on 12/29/16.

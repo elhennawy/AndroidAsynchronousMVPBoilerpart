@@ -1,4 +1,4 @@
-package ro.ovidiuconeac.androidasynchronouscallbackmvpboilerpart;
+package ro.ovidiuconeac.androidasynchronousmvpboilerpart;
 
 import org.junit.Test;
 

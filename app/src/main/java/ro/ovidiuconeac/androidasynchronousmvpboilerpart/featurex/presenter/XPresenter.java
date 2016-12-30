@@ -1,4 +1,4 @@
-package ro.ovidiuconeac.androidasynchronouscallbackmvpboilerpart.featurex.presenter;
+package ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.presenter;
 
 /**
  * Created by ovidiu on 12/29/16.

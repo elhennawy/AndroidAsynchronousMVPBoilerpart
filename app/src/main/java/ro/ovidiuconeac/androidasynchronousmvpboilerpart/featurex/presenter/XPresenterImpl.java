@@ -1,7 +1,7 @@
-package ro.ovidiuconeac.androidasynchronouscallbackmvpboilerpart.featurex.presenter;
+package ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.presenter;
 
-import ro.ovidiuconeac.androidasynchronouscallbackmvpboilerpart.featurex.model.XModel;
-import ro.ovidiuconeac.androidasynchronouscallbackmvpboilerpart.featurex.view.XView;
+import ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.model.XModel;
+import ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.view.XView;
 
 /**
  * Created by ovidiu on 12/29/16.

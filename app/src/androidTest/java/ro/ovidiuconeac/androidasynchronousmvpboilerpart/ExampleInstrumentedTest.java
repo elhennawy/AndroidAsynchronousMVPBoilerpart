@@ -1,4 +1,4 @@
-package ro.ovidiuconeac.androidasynchronouscallbackmvpboilerpart;
+package ro.ovidiuconeac.androidasynchronousmvpboilerpart;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
