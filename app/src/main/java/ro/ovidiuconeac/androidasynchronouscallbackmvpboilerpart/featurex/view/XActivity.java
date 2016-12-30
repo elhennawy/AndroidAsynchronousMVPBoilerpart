@@ -1,6 +1,7 @@
 package ro.ovidiuconeac.androidasynchronouscallbackmvpboilerpart.featurex.view;
 
 import android.os.Bundle;
+import android.os.Process;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
@@ -47,6 +48,7 @@ public class XActivity extends AppCompatActivity implements XView {
         Runnable task = new Runnable() {
             @Override
             public void run() {
+                android.os.Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
                 presenter.requestAction1();
             }
         };
@@ -69,6 +71,7 @@ public class XActivity extends AppCompatActivity implements XView {
         Runnable task = new Runnable() {
             @Override
             public void run() {
+                android.os.Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
                 presenter.requestAction2();
             }
         };
@@ -80,6 +83,7 @@ public class XActivity extends AppCompatActivity implements XView {
         Runnable task = new Runnable() {
             @Override
             public void run() {
+                android.os.Process.setThreadPriority(Process.THREAD_PRIORITY_MORE_FAVORABLE);
                 Log.d(getClass().getName(), result);
             }
         };
@@ -91,6 +95,7 @@ public class XActivity extends AppCompatActivity implements XView {
         Runnable task = new Runnable() {
             @Override
             public void run() {
+                android.os.Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
                 presenter.requestAction3();
             }
         };
@@ -102,6 +107,7 @@ public class XActivity extends AppCompatActivity implements XView {
         Runnable task = new Runnable() {
             @Override
             public void run() {
+                android.os.Process.setThreadPriority(Process.THREAD_PRIORITY_MORE_FAVORABLE);
                 Log.d(getClass().getName(), result);
             }
         };
