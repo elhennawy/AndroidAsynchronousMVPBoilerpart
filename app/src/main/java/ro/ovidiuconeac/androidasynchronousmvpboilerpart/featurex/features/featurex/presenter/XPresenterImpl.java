@@ -4,6 +4,7 @@ import android.os.AsyncTask;
 
 import java.util.UUID;
 
+import ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.common.Util;
 import ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.features.Screen;
 import ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.features.featurex.model.XModel;
 import ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.features.featurex.view.XView;
@@ -30,6 +31,7 @@ public class XPresenterImpl implements XPresenter {
 
             @Override
             protected String doInBackground(Void... params) {
+                Util.simulateNetworkLatency(2000);
                 return model.requestAction1();
             }
 
@@ -47,6 +49,7 @@ public class XPresenterImpl implements XPresenter {
 
             @Override
             protected String doInBackground(Void... params) {
+                Util.simulateNetworkLatency(1500);
                 return model.requestAction2();
             }
 
@@ -64,6 +67,7 @@ public class XPresenterImpl implements XPresenter {
 
             @Override
             protected String doInBackground(Void... params) {
+                Util.simulateNetworkLatency(3000);
                 return model.requestAction3();
             }
 
