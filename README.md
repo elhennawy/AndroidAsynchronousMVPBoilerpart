@@ -79,9 +79,28 @@ When __onRestoreInstanceState__ is called, the view restores its presenter from 
 Asynchronous operations are handled in the presenters. Each presenter acts as a "bridge" between the view and the model (business logic). This "bridge" mechanism is implemented with __AsyncTasks__. Each __AsyncTask__ orchestrates the flow of date between the view and the model, performing background operations and publishing the results on the UI.
 
 ```java
-TODO
+    @Override
+    public void requestAction1() {
+        new AsyncTask<Void, Void, String>() {
+
+            @Override
+            protected String doInBackground(Void... params) {
+                Util.simulateNetworkLatency(2000);
+                return model.requestAction1();
+            }
+
+            @Override
+            protected void onPostExecute(String s) {
+                super.onPostExecute(s);
+                view.postResult1(s);
+            }
+        }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+    }
 ```
 If you are looking for an implementation of this proposed solution, please take a look at the following repository: [Asynchronous MVP design for Android, without 3rd party libraries.](https://github.com/ovicon/AndroidAsynchronousMVP)
+
+Alos a short video discussion about this solution:
+[Asynchronous MVP design for Android, without 3rd party libraries.](https://www.youtube.com/watch?v=S7wIuXRzeJI)
 
 Known issues
 -------
