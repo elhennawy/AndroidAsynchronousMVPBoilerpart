@@ -81,7 +81,7 @@ Asynchronous operations are handled in the presenters. Each presenter acts as a 
 ```java
 TODO
 ```
-If you are looking for an implementaion of this proposed solution, please take a look at the following repository: [Asynchronous MVP design for Android, without 3rd party libraries.](https://github.com/ovicon/AndroidAsynchronousMVP)
+If you are looking for an implementation of this proposed solution, please take a look at the following repository: [Asynchronous MVP design for Android, without 3rd party libraries.](https://github.com/ovicon/AndroidAsynchronousMVP)
 
 Known issues
 -------
