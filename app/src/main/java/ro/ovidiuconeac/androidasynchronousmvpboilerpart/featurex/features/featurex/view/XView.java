@@ -1,10 +1,12 @@
-package ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.view;
+package ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.features.featurex.view;
+
+import ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.features.Screen;
 
 /**
  * Created by ovidiu on 12/29/16.
  */
 
-public interface XView {
+public interface XView  extends Screen {
     void requestAction1();
     void postResult1(String result);
     void requestAction2();
