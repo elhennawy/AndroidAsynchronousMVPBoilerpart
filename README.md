@@ -99,8 +99,7 @@ Asynchronous operations are handled in the presenters. Each presenter acts as a 
 ```
 If you are looking for an implementation of this proposed solution, please take a look at the following repository: [Asynchronous MVP design for Android, without 3rd party libraries.](https://github.com/ovicon/AndroidAsynchronousMVP)
 
-Alos a short video discussion about this solution:
-[Asynchronous MVP design for Android, without 3rd party libraries.](https://www.youtube.com/watch?v=S7wIuXRzeJI)
+See also a short video discussion about this solution [here](https://www.youtube.com/watch?v=S7wIuXRzeJI).
 
 Known issues
 -------
