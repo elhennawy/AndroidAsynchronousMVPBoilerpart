@@ -1,13 +1,13 @@
-package ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.features.featurex.presenter;
+package ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.featurex.presenter;
 
 import android.os.AsyncTask;
 
 import java.util.UUID;
 
-import ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.common.Util;
-import ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.features.Screen;
-import ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.features.featurex.model.XModel;
-import ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.features.featurex.view.XView;
+import ro.ovidiuconeac.androidasynchronousmvpboilerpart.common.Util;
+import ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.Screen;
+import ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.featurex.model.XModel;
+import ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.featurex.view.XView;
 
 /**
  * Created by ovidiu on 12/29/16.

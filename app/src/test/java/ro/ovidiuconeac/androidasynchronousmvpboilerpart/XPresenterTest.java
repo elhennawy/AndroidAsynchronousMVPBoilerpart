@@ -1,13 +1,13 @@
-package ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex;
+package ro.ovidiuconeac.androidasynchronousmvpboilerpart;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.features.featurex.presenter.XPresenter;
-import ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.features.featurex.presenter.XPresenterImpl;
-import ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.features.featurex.view.XView;
+import ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.featurex.presenter.XPresenter;
+import ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.featurex.presenter.XPresenterImpl;
+import ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.featurex.view.XView;
 
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.mock;

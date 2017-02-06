@@ -1,11 +1,11 @@
-package ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.cache;
+package ro.ovidiuconeac.androidasynchronousmvpboilerpart.cache;
 
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-import ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.features.Presenter;
+import ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.Presenter;
 
 /**
  * Created by ovidiu on 2/2/17.

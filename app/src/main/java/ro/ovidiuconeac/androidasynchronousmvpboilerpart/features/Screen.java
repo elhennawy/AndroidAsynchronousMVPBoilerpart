@@ -1,4 +1,4 @@
-package ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.features;
+package ro.ovidiuconeac.androidasynchronousmvpboilerpart.features;
 
 import java.util.UUID;
 

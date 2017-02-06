@@ -1,17 +1,16 @@
-package ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.features.featurex.view;
+package ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.featurex.view;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.TextView;
 
 import java.util.UUID;
 
 import ro.ovidiuconeac.androidasynchronousmvpboilerpart.R;
-import ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.cache.Cache;
-import ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.features.Presenter;
-import ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.features.featurex.presenter.XPresenter;
-import ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.features.featurex.presenter.XPresenterImpl;
+import ro.ovidiuconeac.androidasynchronousmvpboilerpart.cache.Cache;
+import ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.Presenter;
+import ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.featurex.presenter.XPresenter;
+import ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.featurex.presenter.XPresenterImpl;
 
 /**
  * Created by ovidiu on 12/29/16.

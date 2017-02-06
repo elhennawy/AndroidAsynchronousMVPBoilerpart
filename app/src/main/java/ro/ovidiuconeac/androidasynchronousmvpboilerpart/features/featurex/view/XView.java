@@ -1,6 +1,6 @@
-package ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.features.featurex.view;
+package ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.featurex.view;
 
-import ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.features.Screen;
+import ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.Screen;
 
 /**
  * Created by ovidiu on 12/29/16.

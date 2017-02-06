@@ -1,4 +1,4 @@
-package ro.ovidiuconeac.androidasynchronousmvpboilerpart.featurex.features.featurex.model;
+package ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.featurex.model;
 
 /**
  * Created by ovidiu on 12/29/16.
