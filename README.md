@@ -1,15 +1,11 @@
 # AndroidAsynchronousMVPBoilerpart
 Boilerpart code for asynchronous MVP design for Android, without 3rd party libraries.
 
-Description
--------
-Asynchronous MVP design for Android, without 3rd party libraries.
-
-Problem
+The problem
 -------
 How to implement a simple, decoupled, testable, asynchronous MVP design, without using any 3rd party libraries, that can also handle screen orientation.
 
-Solution
+The solution
 -------
 The proposed solution for handling screen orientation, is a simple cache mechanism for the presenters: 
 
