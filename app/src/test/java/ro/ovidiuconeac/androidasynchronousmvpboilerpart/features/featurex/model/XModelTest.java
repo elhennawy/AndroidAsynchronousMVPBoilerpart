@@ -1,10 +1,8 @@
-package ro.ovidiuconeac.androidasynchronousmvpboilerpart.feature.model;
+package ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.featurex.model;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
-import ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.featurex.model.XModel;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

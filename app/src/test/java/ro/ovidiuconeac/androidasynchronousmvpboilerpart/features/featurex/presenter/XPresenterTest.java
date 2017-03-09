@@ -1,14 +1,19 @@
-package ro.ovidiuconeac.androidasynchronousmvpboilerpart.feature.presenter;
+package ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.featurex.presenter;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.featurex.presenter.XPresenter;
-import ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.featurex.presenter.XPresenterImpl;
+import java.util.UUID;
 
+import ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.Screen;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 /**
  * Created by ovidiu on 1/2/17.
@@ -16,10 +21,12 @@ import static org.mockito.Mockito.mock;
 public class XPresenterTest {
 
     private XPresenter presenter;
+    private Screen screen;
 
     @Before
     public void setUp() {
         presenter = mock(XPresenterImpl.class);
+        screen = mock(Screen.class);
     }
 
     @After
@@ -43,5 +50,20 @@ public class XPresenterTest {
     public void testRequestAction3() {
         doNothing().when(presenter).requestAction3();
         presenter.requestAction3();
+    }
+
+    @Test
+    public void testSetScreen() {
+        doNothing().when(presenter).setScreen(any(Screen.class));
+        presenter.setScreen(screen);
+    }
+
+    @Test
+    public void testGetUuid() {
+        UUID uuid = UUID.randomUUID();
+        when(presenter.getUuid()).thenReturn(uuid);
+        UUID result = presenter.getUuid();
+        assertNotNull(result);
+        assertEquals(uuid, result);
     }
 }
