@@ -1,4 +1,4 @@
-package ro.ovidiuconeac.androidasynchronousmvpboilerpart;
+package ro.ovidiuconeac.androidasynchronousmvpboilerpart.feature.model;
 
 import org.junit.After;
 import org.junit.Before;
