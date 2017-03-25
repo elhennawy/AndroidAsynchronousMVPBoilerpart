@@ -1,11 +1,10 @@
 package ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.featurex.presenter;
 
-import android.os.AsyncTask;
-
 import java.util.UUID;
 
 import ro.ovidiuconeac.androidasynchronousmvpboilerpart.common.Util;
 import ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.Screen;
+import ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.featurex.model.Result;
 import ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.featurex.model.XModel;
 import ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.featurex.view.XView;
 
@@ -22,61 +21,40 @@ public class XPresenterImpl implements XPresenter {
     public XPresenterImpl(XView view) {
         this.uuid = UUID.randomUUID();
         this.view = view;
-        this.model = new XModel();
+        this.model = new XModel(this);
     }
 
     @Override
     public void requestAction1() {
-        new AsyncTask<Void, Void, String>() {
+        Util.simulateNetworkLatency(2000);
+        model.requestAction1();
+    }
 
-            @Override
-            protected String doInBackground(Void... params) {
-                Util.simulateNetworkLatency(2000);
-                return model.requestAction1();
-            }
-
-            @Override
-            protected void onPostExecute(String s) {
-                super.onPostExecute(s);
-                view.postResult1(s);
-            }
-        }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+    @Override
+    public void postResult1(Result result) {
+        view.postResult1(result.getResult());
     }
 
     @Override
     public void requestAction2() {
-        new AsyncTask<Void, Void, String>() {
+        Util.simulateNetworkLatency(1500);
+        model.requestAction2();
+    }
 
-            @Override
-            protected String doInBackground(Void... params) {
-                Util.simulateNetworkLatency(1500);
-                return model.requestAction2();
-            }
-
-            @Override
-            protected void onPostExecute(String s) {
-                super.onPostExecute(s);
-                view.postResult2(s);
-            }
-        }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+    @Override
+    public void postResult2(Result result) {
+        view.postResult2(result.getResult());
     }
 
     @Override
     public void requestAction3() {
-        new AsyncTask<Void, Void, String>() {
+        Util.simulateNetworkLatency(3000);
+        model.requestAction3();
+    }
 
-            @Override
-            protected String doInBackground(Void... params) {
-                Util.simulateNetworkLatency(3000);
-                return model.requestAction3();
-            }
-
-            @Override
-            protected void onPostExecute(String s) {
-                super.onPostExecute(s);
-                view.postResult3(s);
-            }
-        }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+    @Override
+    public void postResult3(Result result) {
+        view.postResult3(result.getResult());
     }
 
     @Override

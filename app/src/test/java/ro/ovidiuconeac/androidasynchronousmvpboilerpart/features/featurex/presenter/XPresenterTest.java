@@ -7,12 +7,16 @@ import org.junit.Test;
 import java.util.UUID;
 
 import ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.Screen;
+import ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.featurex.view.XView;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.Matchers.any;
+import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 /**
@@ -20,50 +24,50 @@ import static org.mockito.Mockito.when;
  */
 public class XPresenterTest {
 
-    private XPresenter presenter;
-    private Screen screen;
+    private XView view;
+    private XPresenterImpl presenter;
 
     @Before
     public void setUp() {
-        presenter = mock(XPresenterImpl.class);
-        screen = mock(Screen.class);
+        view = mock(XView.class);
+        presenter = new XPresenterImpl(view);
     }
 
     @After
     public void tearDown() {
+        view = null;
         presenter = null;
     }
 
     @Test
     public void testRequestAction1() {
-        doNothing().when(presenter).requestAction1();
         presenter.requestAction1();
+        verify(view, times(1)).postResult1(anyString());
     }
 
     @Test
     public void testRequestAction2() {
-        doNothing().when(presenter).requestAction2();
         presenter.requestAction2();
+        verify(view, times(1)).postResult2(anyString());
     }
 
     @Test
     public void testRequestAction3() {
-        doNothing().when(presenter).requestAction3();
         presenter.requestAction3();
+        verify(view, times(1)).postResult3(anyString());
     }
 
     @Test
     public void testSetScreen() {
-        doNothing().when(presenter).setScreen(any(Screen.class));
-        presenter.setScreen(screen);
+        // Al least it tests that the method exists in the presenter
+        // Assures interface consistency
+        presenter.setScreen(view);
     }
 
     @Test
     public void testGetUuid() {
-        UUID uuid = UUID.randomUUID();
-        when(presenter.getUuid()).thenReturn(uuid);
-        UUID result = presenter.getUuid();
-        assertNotNull(result);
-        assertEquals(uuid, result);
+        // Al least it tests that the method exists in the presenter
+        // Assures interface consistency
+        presenter.getUuid();
     }
 }

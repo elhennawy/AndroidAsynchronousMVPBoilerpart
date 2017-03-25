@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import java.util.UUID;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import ro.ovidiuconeac.androidasynchronousmvpboilerpart.R;
 import ro.ovidiuconeac.androidasynchronousmvpboilerpart.cache.Cache;
@@ -27,6 +29,7 @@ public class XActivity extends AppCompatActivity implements XView {
     private TextView view2;
     private TextView view3;
     private XPresenter presenter;
+    private ExecutorService executorService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,39 +65,76 @@ public class XActivity extends AppCompatActivity implements XView {
     @Override
     protected void onResume() {
         super.onResume();
+        this.executorService = Executors.newCachedThreadPool();
         this.requestAction1();
         this.requestAction2();
         this.requestAction3();
     }
 
     @Override
-    public void requestAction1() {
-        presenter.requestAction1();
+    protected void onPause() {
+        this.executorService.shutdown();
+        super.onPause();
     }
 
     @Override
-    public void postResult1(String result) {
-        view1.setText(result);
+    public void requestAction1() {
+        executorService.submit(new Runnable() {
+            @Override
+            public void run() {
+                presenter.requestAction1();
+            }
+        });
+    }
+
+    @Override
+    public void postResult1(final String result) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                view1.setText(result);
+            }
+        });
     }
 
     @Override
     public void requestAction2() {
-        presenter.requestAction2();
+        executorService.submit(new Runnable() {
+            @Override
+            public void run() {
+                presenter.requestAction2();
+            }
+        });
     }
 
     @Override
-    public void postResult2(String result) {
-        view2.setText(result);
+    public void postResult2(final String result) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                view2.setText(result);
+            }
+        });
     }
 
     @Override
     public void requestAction3() {
-        presenter.requestAction3();
+        executorService.submit(new Runnable() {
+            @Override
+            public void run() {
+                presenter.requestAction3();
+            }
+        });
     }
 
     @Override
-    public void postResult3(String result) {
-        view3.setText(result);
+    public void postResult3(final String result) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                view3.setText(result);
+            }
+        });
     }
 
     @Override
