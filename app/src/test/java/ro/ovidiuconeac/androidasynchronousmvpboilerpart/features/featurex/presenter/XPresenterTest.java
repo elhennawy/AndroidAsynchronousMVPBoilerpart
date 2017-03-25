@@ -36,24 +36,32 @@ public class XPresenterTest {
 
     @Test
     public void testRequestAction1() {
+        // Al least it tests that the method exists in the presenter
+        // Assures interface consistency
         doNothing().when(presenter).requestAction1();
         presenter.requestAction1();
     }
 
     @Test
     public void testRequestAction2() {
+        // Al least it tests that the method exists in the presenter
+        // Assures interface consistency
         doNothing().when(presenter).requestAction2();
         presenter.requestAction2();
     }
 
     @Test
     public void testRequestAction3() {
+        // Al least it tests that the method exists in the presenter
+        // Assures interface consistency
         doNothing().when(presenter).requestAction3();
         presenter.requestAction3();
     }
 
     @Test
     public void testSetScreen() {
+        // Al least it tests that the method exists in the presenter
+        // Assures interface consistency
         doNothing().when(presenter).setScreen(any(Screen.class));
         presenter.setScreen(screen);
     }

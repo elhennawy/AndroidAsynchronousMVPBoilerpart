@@ -35,30 +35,40 @@ public class XViewTest {
 
     @Test
     public void testRequestAction1() {
+        // Al least it tests that the method exists in the presenter
+        // Assures interface consistency
         doNothing().when(view).requestAction1();
         view.requestAction1();
     }
 
     @Test
     public void testRequestAction2() {
+        // Al least it tests that the method exists in the presenter
+        // Assures interface consistency
         doNothing().when(view).requestAction2();
         view.requestAction2();
     }
 
     @Test
     public void testRequestAction3() {
+        // Al least it tests that the method exists in the presenter
+        // Assures interface consistency
         doNothing().when(view).requestAction3();
         view.requestAction3();
     }
 
     @Test
     public void testCachePresenter() {
+        // Al least it tests that the method exists in the presenter
+        // Assures interface consistency
         doNothing().when(view).cachePresenter(any(Presenter.class));
         view.cachePresenter(any(Presenter.class));
     }
 
     @Test
     public void testRestorePresenter() {
+        // Al least it tests that the method exists in the presenter
+        // Assures interface consistency
         doNothing().when(view).restorePresenter(any(UUID.class));
         view.restorePresenter(any(UUID.class));
     }
