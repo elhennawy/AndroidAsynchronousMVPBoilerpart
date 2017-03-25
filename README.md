@@ -97,6 +97,14 @@ Asynchronous operations are handled in the presenters. Each presenter acts as a 
 If you are looking for an implementation of this proposed solution, please take a look at the following repository: [Asynchronous MVP design for Android, without 3rd party libraries.](https://github.com/ovicon/AndroidAsynchronousMVP)
 
 See also a short video discussion about this solution [here](https://www.youtube.com/watch?v=S7wIuXRzeJI).
+
+The branches
+------- 
+__master__ - The master branch
+
+[__freeze-version-1__](https://github.com/ovicon/AndroidAsynchronousMVPBoilerpart/tree/freeze-version-1) - A backup of the master branch. More loosely coupled MVP design.
+
+[__freeze-version-2__](https://github.com/ovicon/AndroidAsynchronousMVPBoilerpart/tree/freeze-version-2) - A branch based on "freeze-version-1". Removed the AsyncTasks from the presenters. Moved asynchronous operations to views. More tightly coupled MVP design.
  
 License
 -------
