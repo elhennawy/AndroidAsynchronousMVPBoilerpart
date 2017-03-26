@@ -4,20 +4,12 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.UUID;
-
-import ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.Screen;
 import ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.featurex.view.XView;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyString;
-import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 
 /**
  * Created by ovidiu on 1/2/17.

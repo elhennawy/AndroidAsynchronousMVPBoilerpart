@@ -21,39 +21,27 @@ public class XPresenterImpl implements XPresenter {
     public XPresenterImpl(XView view) {
         this.uuid = UUID.randomUUID();
         this.view = view;
-        this.model = new XModel(this);
+        this.model = new XModel();
     }
 
     @Override
     public void requestAction1() {
         Util.simulateNetworkLatency(2000);
-        model.requestAction1();
-    }
-
-    @Override
-    public void postResult1(Result result) {
+        Result result = model.requestAction1();
         view.postResult1(result.getResult());
     }
 
     @Override
     public void requestAction2() {
         Util.simulateNetworkLatency(1500);
-        model.requestAction2();
-    }
-
-    @Override
-    public void postResult2(Result result) {
+        Result result = model.requestAction2();
         view.postResult2(result.getResult());
     }
 
     @Override
     public void requestAction3() {
         Util.simulateNetworkLatency(3000);
-        model.requestAction3();
-    }
-
-    @Override
-    public void postResult3(Result result) {
+        Result result = model.requestAction3();
         view.postResult3(result.getResult());
     }
 

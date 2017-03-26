@@ -3,16 +3,14 @@ package ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.featurex.view;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.Presenter;
-import ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.Screen;
-import ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.featurex.presenter.XPresenterImpl;
 
 import java.util.UUID;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import ro.ovidiuconeac.androidasynchronousmvpboilerpart.features.Presenter;
+
 import static org.mockito.Matchers.any;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.mock;
 
 /**
  * Created by ovidiu on 1/2/17.
